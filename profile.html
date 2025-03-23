@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Fresh & Fast Canteen</title>
+  <meta name="description" content="Manage your Fresh & Fast account">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/cart-styles.css">
+  <link rel="stylesheet" href="css/auth-styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <div class="page-container">
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html" class="logo-link">
+            <span class="logo-icon">🍽️</span>
+            <span class="logo-text">Fresh & Fast</span>
+          </a>
+        </div>
+
+        <nav class="desktop-nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="menu.html" class="nav-link">Menu</a></li>
+            <li><a href="order.html" class="nav-link">Order</a></li>
+            <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+            <li><a href=" .html" class="nav-link"> </a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+          </button>
+          <a href="cart.html" class="icon-button cart-button" aria-label="Shopping cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+            <span class="cart-badge">0</span>
+          </a>
+          <a href="login.html" class="icon-button user-button active" aria-label="User account">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </a>
+          <button id="mobile-menu-toggle" class="icon-button mobile-menu-button" aria-label="Toggle menu">
+            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="mobile-nav" class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="menu.html" class="mobile-nav-link">Menu</a></li>
+          <li><a href="order.html" class="mobile-nav-link">Order</a></li>
+          <li><a href="feedback.html" class="mobile-nav-link">Feedback</a></li>
+          <li><a href=" .html" class="mobile-nav-link"> </a></li>
+          <li><a href="login.html" class="mobile-nav-link active">My Account</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container page-content">
+        <h1 class="page-title animate-fade-in">My Profile</h1>
+        
+        <div class="profile-container">
+          <div class="profile-sidebar animate-slide-right">
+            <div class="profile-menu">
+              <div class="profile-menu-header">
+                <div class="profile-avatar" id="profile-avatar">
+                  <!-- Will be populated by JavaScript -->
+                </div>
+                <div class="profile-name" id="profile-name">
+                  <!-- Will be populated by JavaScript -->
+                </div>
+              </div>
+              <ul class="profile-menu-items">
+                <li class="profile-menu-item active">
+                  <a href="#personal-info" class="profile-menu-link" data-tab="personal-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    Personal Information
+                  </a>
+                </li>
+                <li class="profile-menu-item">
+                  <a href="#order-history" class="profile-menu-link" data-tab="order-history">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    Order History
+                  </a>
+                </li>
+                <li class="profile-menu-item">
+                  <a href="#addresses" class="profile-menu-link" data-tab="addresses">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Addresses
+                  </a>
+                </li>
+                <li class="profile-menu-item">
+                  <a href="#payment-methods" class="profile-menu-link" data-tab="payment-methods">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                    Payment Methods
+                  </a>
+                </li>
+                <li class="profile-menu-item">
+                  <a href="#account-settings" class="profile-menu-link" data-tab="account-settings">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    Account Settings
+                  </a>
+                </li>
+              </ul>
+              <div class="profile-menu-footer">
+                <button id="logout-button" class="button outline-button full-width">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                  Logout
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="profile-content animate-slide-left">
+            <div class="tab-content active" id="personal-info">
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Personal Information</h2>
+                  <p class="card-description">Manage your personal details</p>
+                </div>
+                <div class="card-content">
+                  <form id="profile-form" class="form">
+                    <div class="form-row">
+                      <div class="form-group half">
+                        <label for="first-name" class="form-label">First Name</label>
+                        <input type="text" id="first-name" class="form-input" placeholder="First name">
+                      </div>
+                      
+                      <div class="form-group half">
+                        <label for="last-name" class="form-label">Last Name</label>
+                        <input type="text" id="last-name" class="form-input" placeholder="Last name">
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" id="email" class="form-input" placeholder="Email address" readonly>
+                      <div class="input-note">Email cannot be changed</div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="tel" id="phone" class="form-input" placeholder="Phone number">
+                    </div>
+                    
+                    <div class="form-actions">
+                      <button type="submit" class="button primary-button">Save Changes</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-content" id="order-history">
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Order History</h2>
+                  <p class="card-description">View your past orders</p>
+                </div>
+                <div class="card-content">
+                  <div class="order-history-empty" id="order-history-empty">
+                    <div class="empty-state-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    </div>
+                    <h3>No Orders Yet</h3>
+                    <p>You haven't placed any orders yet.</p>
+                    <a href="menu.html" class="button primary-button">Browse Menu</a>
+                  </div>
+                  
+                  <div class="order-history-list" id="order-history-list" style="display: none;">
+                    <!-- Will be populated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-content" id="addresses">
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Addresses</h2>
+                  <p class="card-description">Manage your delivery addresses</p>
+                </div>
+                <div class="card-content">
+                  <div class="addresses-empty" id="addresses-empty">
+                    <div class="empty-state-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <h3>No Addresses Saved</h3>
+                    <p>You haven't saved any delivery addresses yet.</p>
+                    <button id="add-address-btn" class="button primary-button">Add New Address</button>
+                  </div>
+                  
+                  <div class="addresses-list" id="addresses-list" style="display: none;">
+                    <!-- Will be populated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-content" id="payment-methods">
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Payment Methods</h2>
+                  <p class="card-description">Manage your payment options</p>
+                </div>
+                <div class="card-content">
+                  <div class="payment-methods-empty" id="payment-methods-empty">
+                    <div class="empty-state-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                    </div>
+                    <h3>No Payment Methods</h3>
+                    <p>You haven't added any payment methods yet.</p>
+                    <button id="add-payment-btn" class="button primary-button">Add Payment Method</button>
+                  </div>
+                  
+                  <div class="payment-methods-list" id="payment-methods-list" style="display: none;">
+                    <!-- Will be populated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-content" id="account-settings">
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Account Settings</h2>
+                  <p class="card-description">Manage your account preferences</p>
+                </div>
+                <div class="card-content">
+                  <form id="settings-form" class="form">
+                    <div class="form-group">
+                      <label class="form-label">Email Notifications</label>
+                      <div class="checkbox-option">
+                        <input type="checkbox" id="order-updates" name="notifications" value="order-updates" checked>
+                        <label for="order-updates">Order updates</label>
+                      </div>
+                      <div class="checkbox-option">
+                        <input type="checkbox" id="promotions" name="notifications" value="promotions" checked>
+                        <label for="promotions">Promotions and offers</label>
+                      </div>
+                      <div class="checkbox-option">
+                        <input type="checkbox" id="newsletters" name="notifications" value="newsletters">
+                        <label for="newsletters">Newsletters</label>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label">Account Preferences</label>
+                      <div class="checkbox-option">
+                        <input type="checkbox" id="save-payment" name="preferences" value="save-payment">
+                        <label for="save-payment">Save payment information</label>
+                      </div>
+                      <div class="checkbox-option">
+                        <input type="checkbox" id="remember-me" name="preferences" value="remember-me" checked>
+                        <label for="remember-me">Remember me on this device</label>
+                      </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                      <button type="submit" class="button primary-button">Save Preferences</button>
+                    </div>
+                  </form>
+                  
+                  <div class="danger-zone">
+                    <h3 class="danger-zone-title">Danger Zone</h3>
+                    <p class="danger-zone-description">Permanently delete your account and all associated data.</p>
+                    <button id="delete-account-btn" class="button danger-button">Delete Account</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">Fresh & Fast</h3>
+            <p class="footer-text">Delicious meals delivered fresh and fast to your location.</p>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="menu.html" class="footer-link">Menu</a></li>
+              <li><a href="order.html" class="footer-link">Order</a></li>
+              <li><a href="feedback.html" class="footer-link">Feedback</a></li>
+              <li><a href=" .html" class="footer-link"> </a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Opening Hours</h3>
+            <ul class="footer-hours">
+               <li>Tuesday - Friday: 9:00 AM - 6:00 PM</li>
+                            <li>Saturday: 10:00 AM - 4:30 PM</li>
+                            <li>Sunday - Monday: Holiday</li
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">  Us</h3>
+            <ul class="footer-links">
+              <li><a href="tel:7432840665" class="footer-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                7432840665
+              </a></li>
+              <li><a href="tel:8336942266" class="footer-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                8336942266
+              </a></li>
+              <li><a href="mailto:gmit-canteen@gmail.com" class="footer-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                gmit-canteen@gmail.com
+              </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="current-year"></span> Fresh & Fast Canteen. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
+
